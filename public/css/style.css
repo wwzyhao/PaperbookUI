@@ -3,3 +3,8 @@ body
 	padding-top: 70px; 
 }
 
+#resultStats
+{
+	display: block;
+	color: #999;
+}
