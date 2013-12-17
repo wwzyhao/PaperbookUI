@@ -1,0 +1,257 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Upload</title>
+
+  <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="public/css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">PaperBook</a>
+      </div>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Search</button>
+      </form>
+      <div class="navbar-right">
+        <button type="button" class="btn btn-default navbar-btn">Sign up</button>
+        <button type="button" class="btn btn-default navbar-btn">Sign in</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid col-md-9 col-md-offset-1">
+    <div class="row">
+      <div id="uploadPanel" class="">
+        <form class="form-horizontal basicInfo well" role="form">
+          <div class="form-group">
+            <label class="">File upload</label>
+            <span class="btn btn-warning fileinput-button">
+                <i class="glyphicon glyphicon-plus"></i>
+                <span>Select Literature</span>
+                <input type="file" name="files[]" multiple="">
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="title" class="col-md-1 control-label">Title</label>
+            <div class="col-md-7">
+              <input type="text" name="title" id="title" class="form-control" placeholder="Title">
+            </div>
+            <label for="year" class="col-md-1 control-label">Year</label>
+            <div class="col-md-3">
+              <input type="number" name="year" id="year" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="authors" class="col-md-1 control-label">Authors</label>
+            <div class="col-md-11">
+              <input type="text" name="authors" id="authors" class="form-control" placeholder="Authors">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="publisher" class="col-md-1 control-label">Publisher</label>
+            <div class="col-md-11">
+              <input type="text" name="publisher" id="publisher" class="form-control" placeholder="Publisher">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="url" class="col-md-1 control-label">Url</label>
+            <div class="col-md-7">
+              <input type="text" name="url" id="url" class="form-control" placeholder="Url">
+            </div>
+            <label for="pages" class="col-md-1 control-label">Pages</label>
+            <div class="col-md-3">
+              <input type="number" name="pages" id="pages" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="keywords" class="col-md-1 control-label">Keywords</label>
+            <div class="col-md-11">
+              <input type="text" name="keywords" id="keywords" class="form-control" placeholder="Keywords">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="abstract" class="col-md-1 control-label">Abstract</label>
+            <div class="col-md-11">
+                <textarea type="text" rows="3" name="abstract" id="abstract" class="form-control" placeholder="Abstract"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="references" class="col-md-1 control-label">References</label>
+            <div class="col-md-11">
+                <textarea type="text" rows="3" name="references" id="references" class="form-control" placeholder="References"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="cited" class="col-md-1 control-label">Cited</label>
+            <div class="col-md-11">
+                <textarea type="text" rows="3" name="cited" id="cited" class="form-control" placeholder="Cited"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="category" class="col-md-1 control-label">Category</label>
+            <div class="col-md-11">
+                <input type="text" rows="3" name="abstract" id="category"  class="form-control" placeholder="Category"></input>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="">File upload</label>
+            <span class="btn btn-warning fileinput-button">
+                <i class="glyphicon glyphicon-plus"></i>
+                <span>Select Accessory</span>
+                <input type="file" name="files[]" multiple="">
+            </span>
+          </div>
+        </form>
+      </div>
+
+      <div>
+        <ul class="nav nav-tabs">
+          <li class="dropdown active">
+            <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown"><b>Category</b><b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+              <li><a href="#book" tabindex="-1" data-toggle="tab">Book</a></li>
+              <li><a href="#book_section" tabindex="-1" data-toggle="tab">Book Section</a></li>
+              <li><a href="#journal" tabindex="-1" data-toggle="tab">Journal</a></li>
+              <li><a href="#conference" tabindex="-1" data-toggle="tab">Conference</a></li>
+              <li><a href="#thesis" tabindex="-1" data-toggle="tab">Thesis</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="tab-content well">
+          <div class="tab-pane fade in active" id="book">
+            <form class="form-horizontal" role="form">
+              <div class="form-group">
+                <label for="editor" class="col-md-1 control-label">Editor</label>
+                <div class="col-md-11">
+                  <input type="text" name="editor" id="editor" class="form-control" placeholder="Editor">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="isbn" class="col-md-1 control-label">ISBN</label>
+                <div class="col-md-11">
+                  <input type="text" name="isbn" id="isbn" class="form-control" placeholder="ISBN">
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="tab-pane fade" id="book_section">
+            <form class="form-horizontal" role="form">
+              <div class="form-group">
+                <label for="editor" class="col-md-1 control-label">Editor</label>
+                <div class="col-md-11">
+                  <input type="text" name="editor" id="editor" class="form-control" placeholder="Editor">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="book_name" class="col-md-1 control-label">Book</label>
+                <div class="col-md-11">
+                  <input type="text" name="book_name" id="book_name" class="form-control" placeholder="Book">
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="tab-pane fade" id="journal">
+            <form class="form-horizontal" role="form">
+              <div class="form-group">
+                <label for="publication" class="col-md-1 control-label">Publication</label>
+                <div class="col-md-11">
+                  <input type="text" name="publication" id="publication" class="form-control" placeholder="Publication">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="volume" class="col-md-1 control-label">Volume</label>
+                <div class="col-md-3">
+                  <input type="number" name="volume" id="volume" class="form-control" placeholder="Volume">
+                </div>
+                <label for="issue" class="col-md-1 control-label">Issue</label>
+                <div class="col-md-3">
+                  <input type="number" name="issue" id="issue" class="form-control" placeholder="Issue">
+                </div>
+                <label for="doi" class="col-md-1 control-label">DOI</label>
+                <div class="col-md-3">
+                  <input type="text" name="doi" id="doi" class="form-control" placeholder="DOI">
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="tab-pane fade" id="conference">
+            <form class="form-horizontal" role="form">
+              <div class="form-group">
+                <label for="publication" class="col-md-1 control-label">Publication</label>
+                <div class="col-md-11">
+                  <input type="text" name="publication" id="publication" class="form-control" placeholder="Publication">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="city" class="col-md-1 control-label">City</label>
+                <div class="col-md-11">
+                  <input type="text" name="city" id="city" class="form-control" placeholder="City">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="volume" class="col-md-1 control-label">Volume</label>
+                <div class="col-md-3">
+                  <input type="number" name="volume" id="volume" class="form-control" placeholder="Volume">
+                </div>
+                <label for="issue" class="col-md-1 control-label">Issue</label>
+                <div class="col-md-3">
+                  <input type="number" name="issue" id="issue" class="form-control" placeholder="Issue">
+                </div>
+                <label for="doi" class="col-md-1 control-label">DOI</label>
+                <div class="col-md-3">
+                  <input type="text" name="doi" id="doi" class="form-control" placeholder="DOI">
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="tab-pane fade" id="thesis">
+            <form class="form-horizontal" role="form">
+              <div class="form-group">
+                <label for="college" class="col-md-1 control-label">College</label>
+                <div class="col-md-11">
+                  <input type="text" name="college" id="college" class="form-control" placeholder="College">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="pull-right">
+        <button class="btn btn-default">Cancel</button>
+        <button class="btn btn-success">Submit</button>
+      </div>
+    </div>
+  </div>
+  
+  <script type="text/javascript" src="public/js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="public/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="public/js/bootstrap-rating-input.min.js"></script>
+  
+
+</body>
+</html>
